@@ -11,7 +11,7 @@ var age = 22;
 
 // Changing the value of variables
 id = 456;
-name = "ramesh";
+name = "suresh";
 age = 25;
 
 // Accessing the values of variables
