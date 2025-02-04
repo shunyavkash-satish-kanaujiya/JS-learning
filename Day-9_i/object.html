@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Object</h1>
+    <p>Object is a non-primitive data type in JavaScript. It is a collection of
+        properties and methods.</p>
+    <p>Objects are created using curly braces {} and have properties and methods defined inside them.</p>
+    <p>Here is an example of an object:</p>
+    <pre>
+        let person = {
+            name: "satish",
+            age: 22,
+            greet: function() {
+                console.log('Hello, my name is'+ this.name);
+            }
+        };
+        </pre>
+    <p>To access a property or method of an object, you can use dot notation or square bracket notation.</p>
+    <p>For example, person.name will return 'satish', and person.greet() will log 'Hello, my name is satish'.</p>
+    <p>Objects can also have nested objects and arrays as properties.</p>
+    <p>Here is an example of an object with nested objects and arrays:</p>
+    <pre>
+            let person = {
+                name: "satish",
+                age: 22,
+                address: {
+                    street: '123 Main St',
+                    city: 'surat'
+                },
+                hobbies: ['reading', 'painting', 'cooking']
+            };
+            </pre>
+    <p>To access a property or method of a nested object or array, you can use dot notation or square bracket notation with the nested property or array index.</p>
+    <p>For example, person.address.street will return '123 Main St', and person.hobbies[1] will return 'painting'.</p>
+
+</body>
+<script src="./object.js"></script>
+
+</html>

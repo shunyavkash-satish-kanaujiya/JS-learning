@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure</title>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Closure</h1>
+    <p>A closure is a function that has access to variables from its parent scope even after the parent function has finished executing.</p>
+    <p>Here is an example of a closure:</p>
+    <pre>
+        <code>
+            function outer() {
+                let count = 0;
+                return function inner() {
+                    return count++;
+                }
+            }
+            let counter = outer();
+            console.log(counter()); // 0
+            console.log(counter()); // 1
+            console.log(counter()); // 2
+            console.log(counter()); // 3
+
+
+            // The inner function has access to the count variable from the outer function, even after the outer function has finished executing.
+            console.log(count);
+             // ReferenceError: count is not defined
+    <p>In this example, the inner function has access to the count variable from the outer function because it is a closure. The inner function is returned by the outer function, and the outer function has finished executing, but the inner function still has access to the count variable.</p>
+    <p>Closures are commonly used in JavaScript to create private variables and share state between functions.</p>
+    <h2>Note: Closures can also be created using IIFE (Immediately Invoked Function Expression) and other techniques, but they are less commonly used in modern JavaScript.</h2>
+
+    </code>
+    </pre>
+</body>
+<script src="./index.js"></script>
+
+</html>
