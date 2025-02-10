@@ -31,7 +31,6 @@ document.querySelector(".signup").addEventListener("click", function(e) {
   document
     .querySelectorAll(".error")
     .forEach((curEle) => (curEle.textContent = ""));
-
   let isValid = true;
 
   if (!nameRegex.test(name.value)) {
