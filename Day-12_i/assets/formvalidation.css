@@ -39,7 +39,7 @@ body {
 .signup-form,
 .form-img {
   flex: 1;
-  min-width: 300px;
+  width: 300px;
   padding: 30px;
 }
 .form-header {
@@ -115,9 +115,9 @@ form .input:focus {
 }
 .password-input img {
   position: absolute;
-  width: 40px;
-  bottom: 1%;
-  left: 85%;
+  width: 30px;
+  bottom: 8%;
+  left: 90%;
   cursor: pointer;
 }
 .error {
@@ -135,13 +135,13 @@ form .input:focus {
   margin-right: 10px;
 }
 .checkbox span {
-  color: #000;
-  text-decoration: underline;
+  color: blue;
+  text-decoration: none;
   cursor: pointer;
   transition: color 0.3s;
 }
 .checkbox span:hover {
-  color: #007bff;
+  color: #5aa6f7;
 }
 .signup-btn button {
   padding: 12px;
@@ -196,6 +196,10 @@ form .input:focus {
   .type a {
     width: 100%;
     justify-content: center;
+  }
+  .password-input img {
+    bottom: 8%;
+    left: 85%;
   }
   .checkbox p {
     font-size: 12px;

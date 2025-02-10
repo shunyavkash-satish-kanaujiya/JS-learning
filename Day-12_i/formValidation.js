@@ -13,7 +13,7 @@ eyeIcon.addEventListener("click", function() {
       eyeIcon.src = "./assets/image/eye-open.png";
     } else {
       password.type = "password";
-      eyeIcon.src = "./assets/image/eye.close.png";
+      eyeIcon.src = "./assets/image/eye-close.png";
     }
   } else {
     passErr.textContent = "*please first enter your password";
