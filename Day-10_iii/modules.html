@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modules</title>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Modules</h1>
+    <p>JavaScript modules are a way to organize and structure your code. They allow you to create reusable pieces of code that can be imported and used in other parts of your application.</p>
+    <h2>Types of Modules</h2>
+    <ul>
+        <li><strong>ES6 Modules:</strong> These are the default type of module in
+            JavaScript. They are defined using the `import` and `export` keywords.</li>
+        <li>you can export perticular function or variable using export keyword</li>
+        <pre>
+    // myModule.js
+    export const PI = 3.14;
+    export function calculateArea(radius) {
+        return PI * radius * radius;
+    }
+</pre>
+        <li><strong>CommonJS Modules:</strong> These are also supported in Node.js. They are defined using `require()` and `module.exports`.</li>
+        <li><strong>export default</strong> used to export a single value, function, or class from a module so that it can be imported without using curly braces {} in another file.</li>
+        <pre>
+    // myModule.js
+    export default function greet(name) {
+        console.log(`Hello, ${name}!`);
+    }
+</pre>
+        <li>
+            You can rename imports using <as:></as:>
+        </li>
+        <pre>
+    import { add as sum } from './path';    
+    console.log(sum(4, 2)); // Output: 6
+</pre>
+    </ul>
+</body>
+<script type="module" src="./module-2.js"></script>
+
+</html>

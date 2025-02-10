@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listners</title>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Event Listners</h1>
+    <p>Event listeners allow JavaScript code to be executed when specific events occur on HTML elements.</p>
+    <p>Here are some basic examples of event listeners:</p>
+    <h2>Example 1: Click Event Listener</h2>
+    <p>Add a click event listener to a button:</p>
+    <button id="myButton">Click me!</button>
+    <script>
+        const myButton = document.getElementById("myButton");
+        myButton.addEventListener("click", function () {
+            alert("Button clicked!");
+        });
+    </script>
+
+    <h2>Example 2: Keydown Event Listener</h2>
+    <p>Add a keydown event listener to the input field:</p>
+    <input type="text" id="myInput" onkeydown="handleKeydown(event)">
+    <script>
+        function handleKeydown(event) {
+            if (event.key === "Enter") {
+                alert(`${event.target.value} Entered`);
+            }
+        }
+    </script>
+
+    <h2>Example 3: Change Event Listener</h2>
+    <p>Add a change event listener to a select element:</p>
+    <select id="mySelect" onchange="handleSelectionChange()">
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+    </select>
+    <script>
+        function handleSelectionChange() {
+            const selectedOption = document.getElementById("mySelect").value;
+            alert(`Selected option: ${selectedOption}`);
+        }
+    </script>
+
+    <h2>Example 5: Form Submission Event Listener</h2>
+    <p>Add a form submission event listener to a form:</p>
+    <form id="myForm" onsubmit="handleFormSubmit(event)">
+        <input type="text" id="myInputField" required>
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const inputField = document.getElementById("myInputField");
+            alert(`Form submitted with value: ${inputField.value}`);
+        }
+    </script>
+</body>
+
+</html>

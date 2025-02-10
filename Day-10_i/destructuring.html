@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+</head>
+
+<body>
+    <h1>Destructuring</h1>
+    <p>Destructuring is a JavaScript feature that allows you to unpack values from arrays or objects into distinct variables.</p>
+    <p>Here are some examples of destructuring in JavaScript:</p>
+    <h2>Array Destructuring</h2>
+    <pre>
+        <code>
+        const numbers = [1, 2, 3, 4, 5];
+        const [a, b, c, d, e] = numbers;
+        console.log(a, b, c, d, e); // Output: 1 2 3 4 5
+        </code>
+    </pre>
+
+    <h2>Object Destructuring</h2>
+    <pre>
+        <code>
+        const person = { name: 'sk', age: 22, occupation: 'Developer' };
+        const { name, age, occupation } = person;
+        console.log(name, age, occupation); // Output: sk 22 Developer
+        </code>
+    </pre>
+
+    <h2>Nested Destructuring</h2>
+    <pre>
+        <code>
+        const person = { name: 'sk', age: 22, occupation: 'Developer', address: { street: '123 Main St', city: 'New York', state: 'NY' } };
+        const { name, age, occupation, address: { street, city, state } } = person;
+        console.log(name, age, occupation, street, city, state); // Output: sk 22 Developer 123 Main St New York NY
+        </code>
+    </pre>
+
+    <h2>Default Values</h2>
+    <pre>
+        <code>
+        const person = { name: 'sk', age: 22 };
+        const { name, age, occupation = 'Unknown' } = person;
+        console.log(name, age, occupation); // Output: sk 22 Unknown
+        </code>
+    </pre>
+
+
+</body>
+<script src="./destructuring.js"></script>
+
+</html>

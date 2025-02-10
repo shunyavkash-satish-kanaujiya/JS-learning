@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task List Using Local Storage</title>
+</head>
+
+<body>
+    <h1>Task List</h1>
+    <input type="text" id="taskInput" placeholder="Enter Your Task">
+    <button onclick="addTask()">Add Task</button>
+    <ul id="taskList">
+        <!-- <li>sk<span>delete</span></li> -->
+    </ul>
+
+    <script>
+        let taskinput = document.getElementById("taskInput");
+        let taskList = document.getElementById("taskList");
+        let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+        let taskCount = 0;
+        displayTasks();
+        function displayTasks() {
+            taskList.innerHTML = "";
+            tasks.forEach((task, index) => {
+                let li = document.createElement("li");
+                li.textContent = task;
+                let deleteButton = document.createElement("span");
+                deleteButton.textContent = "delete";
+                deleteButton.addEventListener("click", () => {
+                    tasks.splice(index, 1);
+                    localStorage.setItem("tasks", JSON.stringify(tasks));
+                    displayTasks();
+                });
+                li.appendChild(deleteButton);
+                taskList.appendChild(li);
+            });
+        }
+        function addTask() {
+            let task = taskinput.value.trim();
+            if (task) {
+                tasks.push(task);
+                localStorage.setItem("tasks", JSON.stringify(tasks));
+                taskinput.value = "";
+                displayTasks();
+            }
+            taskCount++;
+        }
+
+    </script>
+</body>
+
+</html>

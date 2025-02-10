@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread And Rest Operator</title>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Spread and Rest Operator</h1>
+    <p>The spread and rest operators in JavaScript are used to manipulate arrays and objects.</p>
+    <h2>Spread Operator (...)</h2>
+    <p>The spread operator allows an iterable (like an array or string) to be expanded in places where multiple arguments or elements are expected.</p>
+    <p>Here are some examples of the spread operator:</p>
+    <h3>Example 1: Concatenating arrays</h3>
+    <p>Using the spread operator to concatenate two arrays:</p>
+    <pre>
+        const arr1 = [1, 2, 3];
+        const arr2 = [4, 5, 6];
+        const combinedArray = [...arr1,...arr2];
+        console.log(combinedArray); // Output: [1, 2, 3, 4, 5, 6]
+    </pre>
+    <h3>Example 2: Merging objects</h3>
+    <p>Using the spread operator to merge two objects:</p>
+    <pre>
+        const obj1 = { a: 1, b: 2 };
+        const obj2 = { c: 3, d: 4 };
+        const mergedObject = {...obj1,...obj2 };
+        console.log(mergedObject); // Output: { a: 1, b: 2, c: 3, d: 4 }
+    </pre>
+    <h2>Rest Operator (...)</h2>
+    <p>The rest operator allows an indefinite number of arguments to be unpacked into an array or an object.</p>
+    <p>Here are example of the rest operator:</p>
+    <h3>Example :</h3>
+    <pre>
+        const numbers2 = [1, 2, 3, 4, 5];
+        const [first, second, ...rest] = numbers2;
+        console.log(first, second, rest); // Output: 1 2 [3, 4, 5]
+    </pre>
+
+</body>
+<script src="./spreadAndRest.js"></script>
+
+</html>
