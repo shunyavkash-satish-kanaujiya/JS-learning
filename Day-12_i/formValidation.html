@@ -34,28 +34,28 @@
                         </div>
                     </div>
                 </div>
-                <form id="signup-form">
+                <form id="signup-form" onsubmit="signup(event)">
                     <div class="form-group">
-                        <label>Name</label><br>
+                        <label for="name">Name</label><br>
                         <input type="text" id="name" placeholder="First Name" class="input" required>
                     </div>
                     <div class="error" id="name-err"></div>
 
                     <div class="form-group">
-                        <label>Email</label><br>
+                        <label for="email">Email</label><br>
                         <input type="email" id="email" placeholder="Enter Email" class="input" required>
                     </div>
                     <div class="error" id="email-err"></div>
 
                     <div class="form-group password-input">
-                        <label>Password</label><br>
+                        <label for="password">Password</label><br>
                         <input type="password" id="password" placeholder="Enter Password" class="input" required>
                         <img src="./assets/image/eye-close.png" alt="eye-close" id="eye">
                     </div>
                     <div class="error" id="pass-err"></div>
 
                     <div class="form-group password-input">
-                        <label>Confirm Password</label><br>
+                        <label for="confirm password">Confirm Password</label><br>
                         <input type="text" id="con-password" placeholder="Enter Confirm Password" class="input" required>
                     </div>
                     <div class="error" id="con-pass-err"></div>
@@ -67,7 +67,7 @@
                     <div class="error" id="terms-err"></div>
 
                     <div class="signup-btn">
-                        <button class="signup">Sign Up</button>
+                        <input type="submit" value="Sign Up" class="submit">
                     </div>
                 </form>
             </div>

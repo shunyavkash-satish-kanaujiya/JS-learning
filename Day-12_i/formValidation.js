@@ -20,7 +20,8 @@ eyeIcon.addEventListener("click", function() {
   }
 });
 
-document.querySelector(".signup").addEventListener("click", function(e) {
+const signup = (e) => {
+  // console.log(JSON.stringify(e));
   e.preventDefault();
 
   const nameRegex = /^[a-zA-Z ]{3,20}$/;
@@ -76,4 +77,4 @@ document.querySelector(".signup").addEventListener("click", function(e) {
     alert(`Welcome ${name.value}, You Registered Successfully.`);
     document.getElementById("signup-form").reset();
   }
-});
+};

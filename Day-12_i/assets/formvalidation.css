@@ -143,7 +143,7 @@ form .input:focus {
 .checkbox span:hover {
   color: #5aa6f7;
 }
-.signup-btn button {
+.signup-btn .submit {
   padding: 12px;
   width: 100%;
   border: none;
@@ -154,7 +154,7 @@ form .input:focus {
   margin-top: 10px;
   transition: all 0.3s;
 }
-.signup-btn button:hover {
+.signup-btn .submit:hover {
   background-color: #333;
   transform: scale(1.05);
 }
