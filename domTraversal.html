@@ -101,6 +101,9 @@
         </div>
     </div>
     <script>
+
+
+
         let elements = document.getElementById("elements");
         let msg = document.getElementById("msg");
         let elementList = [];
@@ -115,12 +118,23 @@
         };
 
         const add = () => {
-            let newElement = document.createElement("div");
-            newElement.classList.add("element");
-            newElement.textContent = "Element " + (elementList.length + 1);
-            elements.appendChild(newElement);
-            elementList.push(newElement);
-            checkEmpty();
+            let url = "https://randomuser.me/api/";
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    let results = data.results[0];
+                    let name = results.name.first + " " + results.name.last;
+                    console.log(name)
+                    let newElement = document.createElement("div");
+                    newElement.classList.add("element");
+                    newElement.textContent = name;
+                    elements.appendChild(newElement);
+                    elementList.push(newElement);
+                    checkEmpty();
+                }).catch((err) => {
+                    console.log("Error fetching data: ", err);
+                })
+
         };
 
         const remove = () => {
