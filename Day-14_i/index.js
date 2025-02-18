@@ -7,10 +7,53 @@ employeeData.forEach((employee) => {
   newRow.insertCell(2).textContent = employee.department;
   newRow.insertCell(3).textContent = employee.salary;
 });
-
 document.getElementById("up").addEventListener("click", () => {
-  return employeeData.sort((a, b) => a.salary - b.salary);
+  employeeData.sort((a, b) => a.salary - b.salary);
+  tableBody.innerHTML = "";
+  employeeData.forEach((employee) => {
+    const newRow = tableBody.insertRow();
+    newRow.insertCell(0).textContent = employee.name;
+    newRow.insertCell(1).textContent = employee.age;
+    newRow.insertCell(2).textContent = employee.department;
+    newRow.insertCell(3).textContent = employee.salary;
+  });
 });
+document.getElementById("down").addEventListener("click", () => {
+  employeeData.sort((a, b) => b.salary - a.salary);
+  tableBody.innerHTML = "";
+  employeeData.forEach((employee) => {
+    const newRow = tableBody.insertRow();
+    newRow.insertCell(0).textContent = employee.name;
+    newRow.insertCell(1).textContent = employee.age;
+    newRow.insertCell(2).textContent = employee.department;
+    newRow.insertCell(3).textContent = employee.salary;
+  });
+});
+
+document.getElementById("nameUp").addEventListener("click", () => {
+  employeeData.sort((a, b) => a.name.localeCompare(b.name));
+  tableBody.innerHTML = "";
+  employeeData.forEach((employee) => {
+    const newRow = tableBody.insertRow();
+    newRow.insertCell(0).textContent = employee.name;
+    newRow.insertCell(1).textContent = employee.age;
+    newRow.insertCell(2).textContent = employee.department;
+    newRow.insertCell(3).textContent = employee.salary;
+  });
+});
+
+document.getElementById("nameDown").addEventListener("click", () => {
+  employeeData.sort((a, b) => b.name.localeCompare(a.name));
+  tableBody.innerHTML = "";
+  employeeData.forEach((employee) => {
+    const newRow = tableBody.insertRow();
+    newRow.insertCell(0).textContent = employee.name;
+    newRow.insertCell(1).textContent = employee.age;
+    newRow.insertCell(2).textContent = employee.department;
+    newRow.insertCell(3).textContent = employee.salary;
+  });
+});
+
 const addData = (e) => {
   e.preventDefault();
   const name = document.getElementById("name").value;

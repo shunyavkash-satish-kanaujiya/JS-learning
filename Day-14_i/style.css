@@ -7,7 +7,9 @@ body {
   margin: 0;
   padding: 0;
 }
-
+input[type="number"]::-webkit-inner-spin-button {
+  display: none;
+}
 .container {
   width: 50%;
   margin: 100px auto;
