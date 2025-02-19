@@ -69,3 +69,6 @@ td {
 th {
   background-color: #f8f9fa;
 }
+th button {
+  border-radius: 45%;
+}

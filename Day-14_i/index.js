@@ -54,6 +54,21 @@ document.getElementById("nameDown").addEventListener("click", () => {
   });
 });
 
+//search
+document.getElementById("search").addEventListener("input", () => {
+  const searchValue = document.getElementById("search").value.toLowerCase();
+  const filteredData = employeeData.filter((employee) =>
+    employee.name.toLowerCase().includes(searchValue)
+  );
+  tableBody.innerHTML = "";
+  filteredData.forEach((employee) => {
+    const newRow = tableBody.insertRow();
+    newRow.insertCell(0).textContent = employee.name;
+    newRow.insertCell(1).textContent = employee.age;
+    newRow.insertCell(2).textContent = employee.department;
+    newRow.insertCell(3).textContent = employee.salary;
+  });
+});
 const addData = (e) => {
   e.preventDefault();
   const name = document.getElementById("name").value;
