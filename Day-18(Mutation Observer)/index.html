@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mutation Observer</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="parent">
+            <div contenteditable class="child">First child</div>
+            <div id="another-box">
+                <div contenteditable class="child">Inner child</div>
+            </div>
+            <div contenteditable class="child">Second child</div>
+            <div contenteditable class="child">Third child</div>
+        </div>
+        <div class="buttons">
+            <button onclick="removeFirst()">Remove First Child</button>
+            <button onclick="removeInnerChild()">Remove Inner Child</button>
+            <button onclick="changeTextContent()">change First text content</button>
+        </div>
+    </div>
+</body>
+<script src="./script.js"></script>
+
+</html>
