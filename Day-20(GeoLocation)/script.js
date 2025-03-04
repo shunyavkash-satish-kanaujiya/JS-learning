@@ -76,9 +76,9 @@ const getUserAddress = async (latitude, longitude) => {
   try {
     const response = await fetch(apiUrl);
     const data = await response.json();
-    // document.getElementById(
-    //   "userLocation"
-    // ).textContent = `User Location :- ${data.results[0].formatted}`;
+    document.getElementById(
+      "userLocation"
+    ).textContent = `User Location :- ${data.results[0].formatted}`;
   } catch (err) {
     console.log(err);
   }
