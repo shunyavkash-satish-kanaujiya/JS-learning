@@ -24,7 +24,7 @@ body {
   border-radius: 10px;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(10px);
-  width: 350px;
+  min-width: 350px;
 }
 
 h1 {
