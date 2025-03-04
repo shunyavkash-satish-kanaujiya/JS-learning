@@ -65,6 +65,7 @@ const getLocation = () => {
 
 const showPosition = (position) => {
   const { latitude, longitude } = position.coords;
+  console.log("live", position.coords);
   document.getElementById(
     "location"
   ).innerHTML = `Latitude: ${latitude} <br> Longitude: ${longitude}`;
