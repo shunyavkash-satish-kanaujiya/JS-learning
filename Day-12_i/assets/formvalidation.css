@@ -40,7 +40,7 @@ body {
 .signup-form,
 .form-img {
   flex: 1;
-  min-width: 300px;
+
   padding: 30px;
 }
 .form-header {
